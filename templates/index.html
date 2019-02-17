@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <!-- This loads jQuery, but we're not using it, just plain Javascript for now -->
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
+    </head>
+
+    <body>
+
+        <div class="header">
+            <h1>Adrienne's First Website</h1>
+        </div>
+
+        <div class="tab">
+            <button class="tablinks" id="defaultOpen" onclick="openCity(event, 'submitText')">Submit Text</button>
+            <button class="tablinks" onclick="openCity(event, 'London')">London</button>
+            <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+            <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+        </div>
+
+        <!-- Tab content -->
+        <div id="submitText" class="tabcontent">
+            <h3>Enter Text Below</h3>
+            <!-- Text Box -->
+            <input id="mytext" type="text"/>
+            <!-- Submit button which calls Javascript function alertText() when clicked-->
+            <button id="mybutton" onclick="alertText()">Submit!</button>
+            </br>
+            <button onclick="this.parentElement.style.display='none'">Close Tab</span> 
+        </div>
+
+        <div id="London" class="tabcontent">
+            <h3>London</h3>
+            <p>London is the capital city of England.</p>
+            <button onclick="this.parentElement.style.display='none'">Close Tab</span> 
+        </div>
+
+        <div id="Paris" class="tabcontent">
+            <h3>Paris</h3>
+            <p>Paris is the capital of France.</p>
+            <button onclick="this.parentElement.style.display='none'">Close Tab</span> 
+        </div>
+
+        <div id="Tokyo" class="tabcontent">
+            <h3>Tokyo</h3>
+            <p>Tokyo is the capital of Japan.</p>
+            <button onclick="this.parentElement.style.display='none'">Close Tab</span> 
+        </div>
+
+        </br>
+
+        <form method="post" action="/clickme">
+            <button type="submit">Click Me!</button>
+        </form>
+
+        <!-- Importing external Javascript file from static/js/script.js. url_for syntax is specific to Python Flask-->
+        <script src="{{url_for('static', filename='js/script.js')}}"></script>
+
+    </body>
+
+</html>

@@ -1,0 +1,6 @@
+Python-flask is required for this project. Run 'pip3 install flask' in your terminal to install it
+Start the server by running 'python3 webserver.py' from the root directory, which should contain the file 'webserver.py'
+Open http://127.0.0.1:5000/ in a web brower
+Voila!
+Press CTRL+C in the terminal at any time to stop the server from running
+Note: Some browsers cache files like Javascript and CSS, so if you make changes and restart the server, there's a chance your browser will be using a cached version. You can delete cached images and data in your browser manually, usually by going to preferences. Or there are ways to add to your code to force the browser to reload (https://stackoverflow.com/questions/7413234/how-to-prevent-caching-of-my-javascript-file).
