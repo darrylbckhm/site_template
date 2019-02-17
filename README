@@ -1,4 +1,4 @@
-Python-flask is required for this project. Run 'pip3 install flask' in your terminal to install it
+Python-flask is required for this project. Run 'sudo pip3 install flask' in your terminal to install it
 Run 'git clone https://github.com/darrylbckhm/site_template.git' in your terminal to copy the project to your local machine
 Start the server by running 'python3 webserver.py' from the root directory, which should contain the file 'webserver.py'
 Open http://127.0.0.1:5000/ in a web brower
